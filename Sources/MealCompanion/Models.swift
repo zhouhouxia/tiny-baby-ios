@@ -3,12 +3,23 @@ import Foundation
 enum MealCategory: String, Codable, CaseIterable, Identifiable {
     case chinese = "中餐"
     case noodles = "面与粉"
-    case japanese = "日料"
-    case korean = "韩餐"
+    case korean = "韩式"
     case southeastAsian = "东南亚"
-    case western = "西餐"
+    case western = "西餐/快餐"
+    case snacks = "小吃类"
+
+    case japanese = "日料"
     case light = "清淡"
     case quick = "快速解决"
+
+    static let allCases: [MealCategory] = [
+        .chinese,
+        .noodles,
+        .korean,
+        .southeastAsian,
+        .western,
+        .snacks
+    ]
 
     var id: String { rawValue }
 }
